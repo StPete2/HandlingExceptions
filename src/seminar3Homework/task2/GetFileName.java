@@ -3,14 +3,13 @@ package seminar3Homework.task2;
 import java.util.Scanner;
 
 public class GetFileName {
-    String fileNamePart;
+    Scanner scanner;
 
-    public GetFileName(String fileNamePart) {
-        this.fileNamePart = fileNamePart;
-    }
     String extension = ".txt";
 
-    public String getFileName() {
-        return fileNamePart+ extension;
+    public String getFileName(Scanner scanner) {
+        System.out.println("Введите имя файла (без расширения): ");
+        String fileNamePart = scanner.nextLine();
+        return fileNamePart + extension;
     }
 }
